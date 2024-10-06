@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='results.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+</head>
+<body>
+<h1 class="result-header">Prediction Result</h1>
+<p class="result-description">Based on the data you provided, here's the outcome:</p>
+
+<div class="result-card">
+    <h2 class="prediction-result">The prediction is {{ prediction }}</h2>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<h2 class="result-icon"><i class="fas fa-check-circle"></i> Successful Prediction</h2>
+<a href="/" class="btn btn-primary">Make Another Prediction</a>
+
+    <script>
+
+</script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+/* General body styling */
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+#body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#heading{
+    background-color: rgba(93, 198, 166, 0.42);
+    text-align: center;
+    padding: 5px;
+    color: #3f6025;
+    font-family: Calibri;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+
+/* Center the form */
+form {
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Heading styling */
+h2 {
+    color: #444;
+    font-size: 40px;
+    margin-bottom: 5px;
+    font-family: "Calibri";
+}
+
+/* Style the input file */
+
+/* Upload button styling */
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+    }
+}
+
+#profile-picture {
+    display: flex;
+  opacity: 0.75;
+  justify-content: center;
+    align-items: center;
+  height: 250px;
+  width: 300px;
+  overflow: hidden;
+  position: relative;
+  /* default image */
+  background: url(default.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+
+.file-uploader {
+  /* make it invisible */
+  opacity: 0;
+  /* make it take the full height and width of the parent container */
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  /* make it absolute */
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+

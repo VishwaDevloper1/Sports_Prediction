@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+</head>
+<body>
+    <h2 id="heading">Sports Prediction</h2>
+    <div id="body">
+    <h2>Select an Image to Upload</h2>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <div id="profile-picture"><input class="file-uploader" type="file" name="image" accept="image/*"></div>
+        <button type="submit">Upload</button>
+    </form>
+    </div>
+
+   <script>
+       let div = document.querySelector("#profile-picture")
+        let file = document.querySelector(".file-uploader")
+
+       file.addEventListener("change",function(){
+           const image = this.files[0]
+
+
+           const reader = new FileReader();
+           reader.onload = ()=>{
+               const imgurl = reader.result
+               div.style.background = `url(${imgurl})`
+               div.style.backgroundSize = 'contain';
+               div.style.backgroundRepeat = 'no-repeat';
+
+           }
+          reader.readAsDataURL(image)
+
+       })
+
+</script>
+</body>
+</html>
