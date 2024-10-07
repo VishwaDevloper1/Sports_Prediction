@@ -17,9 +17,9 @@ from tensorflow.keras.models import load_model
 
 
 
-train_dir =r"C:\Users\krish\ml\data\data\train"
-test_dir = r"C:\Users\krish\ml\data\data\test"
-val_dir = r"C:\Users\krish\ml\data\data\val"
+train_dir =r"data\train"
+test_dir = r"data\test"
+val_dir = r"data\val"
 
 train_datagen = ImageDataGenerator( zoom_range=0.2,
                             width_shift_range=0.2,height_shift_range=0.2)
@@ -60,7 +60,7 @@ for layer in base_model.layers:
 x = base_model.output
 x = GlobalAveragePooling2D()(x)
 x = Dropout(0.25)(x)
-predictions = Dense(10, activation="softmax")(x)  # Adjust output size for 500 species
+predictions = Dense(57, activation="softmax")(x)  # Adjust output size for 500 species
 
 # Create the final model
 model = Model(inputs=base_model.input, outputs=predictions)

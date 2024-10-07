@@ -8,8 +8,12 @@ app = Flask(__name__)
 
 
 def predict(img_path):
-  class_labels = ['air hockey', 'ampute football', 'archery', 'arm wrestling', 'axe throwing', 'balance beam',
-                    'barell racing', 'baseball', 'basketball', 'baton twirling']
+  class_labels = ['air hockey', 'ampute football', 'archery', 'arm wrestling', 'axe throwing', 'balance beam', 'barell racing', 'baseball', 'basketball', 'baton twirling',
+ 'bike polo', 'billiards', 'bmx', 'bobsled', 'bowling', 'boxing', 'bull riding', 'bungee jumping', 'canoe slamon', 'cheerleading', 'chuckwagon racing',
+ 'cricket', 'croquet', 'curling', 'disc golf', 'fencing', 'field hockey', 'figure skating men', 'figure skating pairs', 'figure skating women', 'fly fishing'
+, 'football', 'formula 1 racing', 'frisbee', 'gaga', 'giant slalom', 'golf', 'hammer throw', 'hang gliding', 'harness racing', 'high jump', 'hockey', 'horse jumping'
+    , 'horse racing', 'horseshoe pitching', 'hurdles', 'hydroplane racing', 'ice climbing', 'ice yachting', 'jai alai', 'javelin', 'jousting', 'judo', 'lacrosse',
+ 'log rolling', 'luge', 'motorcycle racing']
   model1 = load_model('cnn_model.h5')
   img = image.load_img(img_path, target_size=(299, 299))
   img_array = image.img_to_array(img)
@@ -59,3 +63,4 @@ def upload_image():
 
 if __name__ == '__main__':
     app.run(debug=False)
+
