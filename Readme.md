@@ -41,6 +41,7 @@ Model and Training
  Transfer Learning: EfficientNetB0 has been fine-tuned using transfer learning for optimal performance in classifying sports images.
 
 ( Note - It works for only below sports Categories if you want to add more categories in it u can add more data to data folder and train the model again by running main.py file
+
  'air hockey', 'ampute football', 'archery', 'arm wrestling', 'axe throwing', 'balance beam', 'barell racing', 'baseball', 'basketball', 'baton twirling',
  'bike polo', 'billiards', 'bmx', 'bobsled', 'bowling', 'boxing', 'bull riding', 'bungee jumping', 'canoe slamon', 'cheerleading', 'chuckwagon racing',
  'cricket', 'croquet', 'curling', 'disc golf', 'fencing', 'field hockey', 'figure skating men', 'figure skating pairs', 'figure skating women', 'fly fishing',
